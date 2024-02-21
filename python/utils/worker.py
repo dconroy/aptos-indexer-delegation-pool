@@ -23,7 +23,6 @@ import traceback
 from utils.processor_name import ProcessorName
 from processors.example_event_processor.processor import ExampleEventProcessor
 from processors.delegation_pool.processor import AddDelegationProcessor
-from processors.aptos_ambassador_token.processor import AptosAmbassadorTokenProcessor
 import asyncio
 import logging
 import queue
