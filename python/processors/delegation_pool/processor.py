@@ -50,7 +50,7 @@ class AddDelegationProcessor(TransactionsProcessor):
             for event_index, event in enumerate(user_transaction.events):
                 # Skip events that don't match our filter criteria
                 sequence_number = event.sequence_number
-                logging.info(event.type_str)
+                #logging.info(event.type_str)
               
                 try:
                     if not AddDelegationProcessor.included_event_type(event.type_str):
