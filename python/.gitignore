@@ -3,6 +3,7 @@ cursor.txt
 build
 .env
 node_modules/
+.DS_Store
 
 # Rust specific ignores
 # Please follow https://help.github.com/en/articles/ignoring-files to create a global

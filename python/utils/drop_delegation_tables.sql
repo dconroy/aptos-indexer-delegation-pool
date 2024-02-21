@@ -1,0 +1,2 @@
+drop table delegation_pool.next_versions_to_process;
+drop table delegation_pool.delegation_pool_events;
