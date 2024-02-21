@@ -18,7 +18,7 @@ class AddDelegationEvent(Base):
     __table_args__ = ({"schema": DELEGATION_POOL_SCHEMA_NAME},)
 
     sequence_number: BigIntegerPrimaryKeyType
-    creation_number: BigIntegerType
+    creation_number: BigIntegerPrimaryKeyType
     pool_address: StringType
     delegator_address: StringType
     event_type: StringType
