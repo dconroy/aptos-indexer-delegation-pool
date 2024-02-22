@@ -1,13 +1,13 @@
-## Python Quickstart
+##  Quickstart
 
+This repository was based off https://github.com/aptos-labs/aptos-indexer-processors
 ### Prerequisite
-
 - Docker
 - Postgres DB
 
-### Basic Tutorial
+### Basic Example
 
-In this tutorial, we will be going over how to create and run the Example Event Processor. All source code is in `aptos-indexer-processors/python/processors/example_event_processor`.
+In this example, we will be demonstrating an event processor that looks at delegation contract events.  All source code is based off n `aptos-indexer-processors/python/processors/example_event_processor`.
 
 1. Download the example:
 
@@ -17,13 +17,6 @@ $ git clone https://github.com/aptos-labs/aptos-indexer-processors
 # Navigate to the python folder
 $ cd aptos-indexer-processors/python
 ```
-
-2. Install all dependencies
-
-```
-poetry install
-```
-
 
 3. Prepare the `config.yaml` file.
    Make sure to update the `config.yaml` file with the correct indexer settings and database credentials.
@@ -44,11 +37,7 @@ poetry install
 
 6. Run `poetry run python -m processors.main -c config.yaml` to start indexing!
 
-7. (Optional) Run locally in Docker
 
-   - The included `Dockerfile` is already set up for you to run the example event processor in Docker.
-   - Create `config.yaml` under the `python` folder
-   - Run `docker compose up --build --force-recreate`.
 
 8. Query the data from database in your dApp. It's recommended to use SQLAlchemy for this part.
 

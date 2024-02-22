@@ -3,14 +3,21 @@ server_config:
     processor_config: 
         type: "delegation_pool"
     chain_id: 1
+    
+    #test_net
+    #auth_token: "aptoslabs_xxxxxxxxxxx"
+    #indexer_grpc_data_service_address: "grpc.testnet.aptoslabs.com:443"
+    
+    #mainnet
+    auth_token: "aptoslabs_xxxxxxxxxxx"
     indexer_grpc_data_service_address: "grpc.mainnet.aptoslabs.com:443"
-    auth_token: "<grpc_data_stream_api_key>"
-    postgres_connection_string: "postgresql://<your_connection_uri_to_postgres>"
-    # Optional. Start processor at starting_version
-    starting_version:  122925328  #a few thousand blocks before first delegated staking event
+
+    postgres_connection_string: "postgresql://user:pass@host:port/db?sslmode=require"
+    starting_version: 200000000
+    #delegation contract interactions began around transaction version 204948579
 
     # Optional. Stop processor after ending_version.
-    #ending_version: 114000
+    #ending_version: 418775440
     # Optional. HTTP2 ping interval in seconds to detect if the connection is still alive. Defaults to 30.
     indexer_grpc_http2_ping_interval_in_secs: 30
     # Optional. HTTP2 ping timeout in seconds to detect if the connection is still alive. Defaults to 10
